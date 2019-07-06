@@ -1,0 +1,111 @@
+/* Site Header
+---------------------------------------------- */
+
+.site-header {
+	
+	background-color: #2d2808;
+	background-image:url('assets/images/header-dots-2.png');
+	background-repeat:no-repeat;
+	background-position:center center;
+	box-shadow: 0 12px 8px -8px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 4;
+	> .wrap{
+		min-height: 156px;
+		position:relative;
+		max-width:1088px;
+		margin:0 auto;
+	}
+	@media only screen and (min-width: $standard-screen-width) {
+		
+	}
+	&:after{
+		display:none;
+	}
+}
+
+/* Title Area
+--------------------------------------------- */
+
+.title-area {
+	text-align: center;
+	padding-top: 25px;
+	padding-bottom: 0;
+	@media only screen and (min-width: $standard-screen-width) {
+		padding-bottom: 7.3rem;
+	}
+	.wp-custom-logo & {
+		width: 100%;
+		max-width: 350px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+
+		img {
+			width: auto;
+		}
+	}
+}
+
+.site-title {
+	font-family: 'cormorant_sc_mediumregular';
+	margin-bottom: 0;
+	font-size: 7vw;
+	@media only screen and (min-width: 500px) {
+		font-size: 4.2rem;
+	}
+	font-weight: $font-weight--semibold;
+	line-height: $line-height--smaller;
+	color:$white;
+	letter-spacing: 10px;
+	font-weight:normal;
+	
+	a,
+	a:focus,
+	a:hover {
+		color:$white;
+		text-decoration: none;
+		position:relative;
+		padding-bottom: 20px;
+		display: inline-block;
+		/*
+		&:after{
+			content:'';
+			position:absolute;
+			bottom:0;
+			left:0;
+			right:0;
+			height:1px;
+			background-color:$white;
+		}
+		*/
+		&:before{
+			content:'';
+			position:absolute;
+			bottom:2px;
+			left:0;
+			right:0;
+			height:1px;
+			background-color:#9c9a8b;
+		}
+	}
+
+	.wp-custom-logo & {
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		position: absolute !important;
+		width: 1px;
+		height: 1px;
+		border: 0;
+		word-wrap: normal !important;
+	}
+}
+
+.site-description {
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	border: 0;
+	word-wrap: normal !important;
+}
